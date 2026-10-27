@@ -1,0 +1,24 @@
+{
+  "name": "module-data-groups",
+  "version": "1.0.0",
+  "description": "Like learning a musical instrument, programming requires daily practice.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules ./node_modules/.bin/jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leigh-ross/Module-Data-Groups.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/leigh-ross/Module-Data-Groups/issues"
+  },
+  "homepage": "https://github.com/leigh-ross/Module-Data-Groups#readme",
+  "devDependencies": {
+    "jest": "^30.5.2"
+  }
+}
