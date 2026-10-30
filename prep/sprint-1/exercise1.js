@@ -1,6 +1,6 @@
 // Can you fix this code?
-function doubleAllNumbers() {
-  let doubledNumbers;
+function doubleAllNumbers(numbers) {
+  let doubledNumbers = [];
 
   for (let n of numbers) {
     doubledNumbers.push(n * 2);
@@ -10,5 +10,4 @@ function doubleAllNumbers() {
 }
 
 const myNums = [10, 20, 30];
-doubleAllNumbers(myNums);
-console.log(myNums);
+console.log(doubleAllNumbers(myNums));
