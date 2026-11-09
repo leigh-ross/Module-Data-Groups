@@ -7,6 +7,8 @@ steps
 define the char limit of 200
 access textarea in dom
 when an event occurs we compare char limit with the input number of chars
+calculate chars left
+show the actual chars left under the textArea block
 */
 
 const charLimit = 200;
@@ -17,10 +19,18 @@ const textArea = document.querySelector('#comment-input');
 // run some code when the keyup event takes place
 // eventlisteners ---^
 
-textArea.addEventListener("keyup", function(){
-    console.log(textArea.value, 'textArea value');
-    console.log(charLimit, 'characterLimit');
-});
+function updateCharLimit(){
+  // restrict this vv to actual chars in the comment block (backspace rmv char, shift does nothing,function keys dont affect this, numlock, )
+  // done with textArea.value.length
+  const remainingChars = charLimit - textArea.value.length
+  // update chars on page
+  const charLimitInfo = document.querySelector("#character-limit-info")
+  charLimitInfo.innerText = `You have ${remainingChars} characters remaining`
+}
 
-let remainingChars = charLimit // - currentChars;
-// restrict this to actual chars in the comment block (backspace rmv char, shift does nothing,function keys dont affect this, numlock, )
+textArea.addEventListener("keyup", updateCharLimit);
+// only pass name ==> browser takes responsibility of invoking the function (if its like updateCharLimit() it will break)
+
+
+
+
